@@ -1,0 +1,105 @@
+@import "reset";
+@include meyer-reset();
+
+$defaultBg : #191919;
+
+*{
+  box-sizing: border-box;
+}
+
+%defaultBoxSettings{
+  border: 1px solid black;
+  box-shadow: 4px 10px 4px black;
+  padding: 15px;
+}
+
+header{
+  background: $defaultBg;
+  padding: 20px;
+  box-shadow: 2px 2px 2px #464646;
+  h1{
+    font-size: 2.5em;
+    text-align: center;
+    color: #ffffff;
+    &:first-letter{
+      color: red;
+    }
+  }
+}
+
+.container{
+  max-width: 960px;
+  width: 100%;
+  margin: 0 auto;
+}
+
+.tempo{
+  @extend %defaultBoxSettings;
+  ul{
+    li{
+      display: inline-block;
+      width: 32.8%;
+      button{
+        width: 100%;
+        padding: 10px;
+        background-color: $defaultBg;
+        color: white;
+        transition: 0.5s ease-in-out;
+        &:hover{
+          transition: 0.5s ease-in-out;
+          background-color: lighten($defaultBg, 10%);
+        }
+      }
+    }
+  }
+
+
+}
+
+.tempoHeadLine{
+
+  h1{
+    font-size: 2em;
+  }
+  width: 100%;
+  border-bottom: 1px solid $defaultBg;
+  margin-bottom: 10px;
+}
+
+.playSong{
+  @extend %defaultBoxSettings;
+  margin: 50px 0 50px 0;
+  audio{
+    width: 100%;
+  }
+  .songName{
+    font-size: 0.9em;
+    font-style: italic;
+  }
+}
+
+.uploadSong{
+  @extend %defaultBoxSettings;
+  margin-top: 50px;
+}
+
+.inputStyle{
+  input[type='file']{
+    padding: 10px;
+    background-color: $defaultBg;
+    color: white;
+    transition: 0.5s ease-in-out;
+    width: 50%;
+    float: left;
+  }
+
+  input[type='submit']{
+    background-color: $defaultBg;
+    color: white;
+    transition: 0.5s ease-in-out;
+    width: 50%;;
+    height: 43px;
+    position: relative;
+    top: -2px;
+  }
+}

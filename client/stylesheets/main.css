@@ -1,0 +1,111 @@
+div, span, applet, object, iframe, h1, h2, h3, h4, h5, h6, p, blockquote, pre, a, abbr, acronym, address, big, cite, code, del, dfn, em, img, ins, kbd, q, s, samp, small, strike, strong, sub, sup, tt, var, b, u, i, center, dl, dt, dd, ol, ul, li, fieldset, form, label, legend, table, caption, tbody, tfoot, thead, tr, th, td, article, aside, canvas, details, embed, figure, figcaption, footer, header, hgroup, menu, nav, output, ruby, section, summary, time, mark, audio, video {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font-size: 100%;
+  font: inherit;
+  vertical-align: baseline; }
+
+html, body {
+  height: 100%;
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font-size: 100%;
+  font: inherit;
+  vertical-align: baseline; }
+
+article, aside, details, figcaption, figure, footer, header, hgroup, menu, nav, section {
+  display: block; }
+
+body {
+  line-height: 1; }
+
+ol, ul {
+  list-style: none; }
+
+blockquote, q {
+  quotes: none; }
+
+blockquote:before, blockquote:after {
+  content: "";
+  content: none; }
+
+q:before, q:after {
+  content: "";
+  content: none; }
+
+table {
+  border-collapse: collapse;
+  border-spacing: 0; }
+
+* {
+  box-sizing: border-box; }
+
+.tempo, .playSong, .uploadSong {
+  border: 1px solid black;
+  box-shadow: 4px 10px 4px black;
+  padding: 15px; }
+
+header {
+  background: #191919;
+  padding: 20px;
+  box-shadow: 2px 2px 2px #464646; }
+  header h1 {
+    font-size: 2.5em;
+    text-align: center;
+    color: #ffffff; }
+    header h1:first-letter {
+      color: red; }
+
+.container {
+  max-width: 960px;
+  width: 100%;
+  margin: 0 auto; }
+
+.tempo ul li {
+  display: inline-block;
+  width: 32.8%; }
+  .tempo ul li button {
+    width: 100%;
+    padding: 10px;
+    background-color: #191919;
+    color: white;
+    transition: 0.5s ease-in-out; }
+    .tempo ul li button:hover {
+      transition: 0.5s ease-in-out;
+      background-color: #333333; }
+
+.tempoHeadLine {
+  width: 100%;
+  border-bottom: 1px solid #191919;
+  margin-bottom: 10px; }
+  .tempoHeadLine h1 {
+    font-size: 2em; }
+
+.playSong {
+  margin: 50px 0 50px 0; }
+  .playSong audio {
+    width: 100%; }
+  .playSong .songName {
+    font-size: 0.9em;
+    font-style: italic; }
+
+.uploadSong {
+  margin-top: 50px; }
+
+.inputStyle input[type='file'] {
+  padding: 10px;
+  background-color: #191919;
+  color: white;
+  transition: 0.5s ease-in-out;
+  width: 50%;
+  float: left; }
+.inputStyle input[type='submit'] {
+  background-color: #191919;
+  color: white;
+  transition: 0.5s ease-in-out;
+  width: 50%;
+  height: 43px;
+  position: relative;
+  top: -2px; }

@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <title>Song Transcriber</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link type="text/css" rel="stylesheet" href="client/stylesheets/main.css">
+</head>
+<body>
+
+<header>
+    <h1>Song Transcriber</h1>
+</header>
+
+<div class="container">
+    <section class="uploadSong">
+        <div class="tempoHeadLine">
+            <h1>Upload: </h1>
+        </div>
+        <div class="inputStyle">
+            <form action="/fileupload" method="post" enctype="multipart/form-data">
+                <input type='file' name="upload">
+                <input type="submit" value="Upload">
+            </form>
+        </div>
+    </section>
+</div>
+
+
+<div class="container">
+    <section class="playSong">
+        <div class="tempoHeadLine">
+            <h1>Play: <span class="songName"></span></h1>
+        </div>
+        <audio controls></audio>
+    </section>
+</div>
+
+<div class="container">
+    <section class="tempo">
+        <div class="tempoHeadLine">
+            <h1>Tempo: <span class="songTempo"></span> </h1>
+        </div>
+        <ul>
+            <li><button>100%</button></li>
+            <li><button>75%</button></li>
+            <li><button>50%</button></li>
+        </ul>
+    </section>
+</div>
+
+
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/2.1.4/jquery.js"></script>
+<script src="javascript/mainLogic.js"></script>
+
+</body>
+</html>
