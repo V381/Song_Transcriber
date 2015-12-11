@@ -109,3 +109,7 @@ header {
   height: 43px;
   position: relative;
   top: -2px; }
+
+@media all and (max-width: 740px) {
+  .tempo ul li {
+    width: 32.5%; } }
