@@ -112,4 +112,14 @@ header {
 
 @media all and (max-width: 740px) {
   .tempo ul li {
-    width: 32.1%; } }
+    width: 32.5%; }
+
+  .inputStyle input[type='file'] {
+    float: none;
+    width: 100%; }
+  .inputStyle input[type='submit'] {
+    float: none;
+    width: 100%; } }
+@media all and (max-width: 540px) {
+  .tempo ul li {
+    width: 32%; } }
