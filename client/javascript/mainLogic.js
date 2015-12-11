@@ -10,7 +10,7 @@
     };
 
     $('ul li > button').each(function(val) {
-        $(this).bind('click', function () {
+        $(this).on('touchstart click', function () {
             for(var i in audioTempoMap){
                 if(audioTempoMap.hasOwnProperty(i)){
                     if(i === $(this).html()){
@@ -26,5 +26,5 @@
         $('.songName').html('' + data.substr(7));
         audio.src = data;
     });
-    
+
 })();
