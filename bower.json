@@ -1,0 +1,11 @@
+{
+  "name": "Song Slow Downer",
+  "description": "Bower conf",
+  "version": "0.0.0",
+  "homepage": "https://github.com/V381/Song-Slow-Downer",
+  "license": "You are not authorized to use this application without the permission of owner",
+  "private": true,
+  "dependencies": {
+    "font-awesome": "~4.5.0"
+  }
+}
