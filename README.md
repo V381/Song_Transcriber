@@ -1,5 +1,5 @@
 # Song_Transcriber
-Web application which changes tempo of the song.
+Web application which changes tempo of the song so musician can easily learn it.
 
-Node.js/Express is used for server
-html5 audio used on front end
+Node.js/Express is used for server/back end.
+html5 audio, jquery, bower used on front end.
