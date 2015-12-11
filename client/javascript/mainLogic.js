@@ -23,7 +23,7 @@
     });
 
     $.get('/getFile', function(data){
-        $('.songName').html('? ' + data.substr(7));
+        $('.songName').html('' + data.substr(7));
     });
 
     audio.addEventListener('play', function() {
