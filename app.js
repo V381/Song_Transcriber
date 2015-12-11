@@ -11,7 +11,7 @@ var app = express();
 var songName = '';
 var ms = require('mediaserver');
 
-app.set('port', process.env.PORT || 8080);
+app.set('port', process.env.PORT || OPENSHIFT_NODEJS_PORT || 8080);
 app.use(express.static(__dirname));
 app.use(busboy());
 
