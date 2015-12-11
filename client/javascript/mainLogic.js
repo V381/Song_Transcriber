@@ -24,11 +24,7 @@
 
     $.get('/getFile', function(data){
         $('.songName').html('' + data.substr(7));
+        audio.src = data;
     });
-
-    audio.addEventListener('play', function() {
-        $.get('/getFile', function(data){
-            audio.src = data;
-        })
-    });
+    
 })();
