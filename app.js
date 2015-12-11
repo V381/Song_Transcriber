@@ -42,10 +42,6 @@ app.post('/fileupload', function(req, res) {
 
 });
 
-app.get('/getFile', function(req, res) {
-    res.setHeader("Accept-Ranges","bytes");
-    res.send('/songs/' + String(songName))
-});
 
 
 app.listen(app.get('port'));
