@@ -112,4 +112,25 @@ header{
       }
     }
   }
+  .inputStyle{
+    input[type='file']{
+      float: none;
+      width: 100%;
+    }
+
+    input[type='submit']{
+      float: none;
+      width: 100%;
+    }
+  }
+}
+
+@media all and(max-width: 540px){
+  .tempo{
+    ul{
+      li{
+        width: 32%;
+      }
+    }
+  }
 }
