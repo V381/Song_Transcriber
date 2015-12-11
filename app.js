@@ -33,6 +33,10 @@ app.post('/fileupload', function(req, res) {
         file.pipe(fstream);
         fstream.on('close', function () {
             res.redirect('back');
+            app.get('/getFile', function(req, res) {
+                res.setHeader("Accept-Ranges","bytes");
+                res.send('/songs/' + String(songName))
+            });
         });
     });
 
