@@ -7,4 +7,4 @@ html5 audio, jquery, bower used on front end.
 
 Check it out here : 
 
-https://still-shelf-5762.herokuapp.com/
+https://song-transcriber.herokuapp.com/
