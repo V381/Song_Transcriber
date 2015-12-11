@@ -1,0 +1,12 @@
+{
+  "name": "Song-Slow-Downer",
+  "version": "0.0.1",
+  "dependencies": {
+    "body-parser": "^1.14.1",
+    "connect-busboy": "0.0.2",
+    "express": "^4.13.3",
+    "fs-extra": "^0.26.2",
+    "mediaserver": "0.0.7",
+    "multer": "^1.1.0"
+  }
+}
