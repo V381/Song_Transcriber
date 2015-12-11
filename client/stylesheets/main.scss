@@ -103,3 +103,13 @@ header{
     top: -2px;
   }
 }
+
+@media all and(max-width: 740px){
+  .tempo{
+    ul{
+      li{
+        width: 32.5%;
+      }
+    }
+  }
+}
