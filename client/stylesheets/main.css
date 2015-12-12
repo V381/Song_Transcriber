@@ -123,3 +123,24 @@ header {
 @media all and (max-width: 540px) {
   .tempo ul li {
     width: 32%; } }
+.loop {
+  text-align: center; }
+  .loop i {
+    font-size: 3em;
+    margin-right: 50px;
+    margin-left: 50px;
+    transition: 0.5s ease-in-out; }
+    .loop i:hover {
+      transition: 0.5s ease-in-out;
+      color: #4c4c4c; }
+
+.clearLoop {
+  text-align: center; }
+  .clearLoop button {
+    padding: 10px;
+    background-color: #191919;
+    color: white;
+    transition: 0.5s ease-in-out; }
+    .clearLoop button:hover {
+      transition: 0.5s ease-in-out;
+      background-color: #333333; }
