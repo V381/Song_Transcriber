@@ -1,6 +1,8 @@
 (function() {
     var form = document.getElementsByTagName('form')[0];
-    var audio = document.querySelector('audio');
+    var audio = document.querySelector('audio'),
+        currentLoopTime = -1,
+        endLoopTime = -2;
 
 
     var audioTempoMap = {
@@ -26,5 +28,38 @@
         $('.songName').html('' + data.substr(7));
         audio.src = data;
     });
+
+    $('.fa-repeat').on('touchstart click', function() {
+        currentLoopTime = audio.currentTime;
+        t = false;
+        $('.loopStart').html(Math.floor(currentLoopTime) + ' - ');
+        $('.loopEnd').html('');
+
+    });
+
+    var isAudioPlaying = false;
+
+    $('.fa-rotate-left').on('touchstart click', function() {
+        endLoopTime = audio.currentTime;
+        audio.currentTime = currentLoopTime;
+        $('.loopEnd').html(endLoopTime);
+        audio.play();
+        isAudioPlaying = true;
+    });
+
+    $(audio).bind('timeupdate', function() {
+        console.log(audio.currentTime, endLoopTime);
+        if(Math.floor(audio.currentTime) === Math.floor(endLoopTime)){
+            audio.currentTime = currentLoopTime;
+        }
+    });
+
+    $('.clearLoop > button').on('touchstart click', function() {
+        currentLoopTime = -1;
+        endLoopTime = -2;
+        $('.loopStart').html('');
+        $('.loopEnd').html('');
+    });
+
 
 })();
