@@ -32,7 +32,7 @@
     $('.fa-repeat').on('touchstart click', function() {
         currentLoopTime = audio.currentTime;
         t = false;
-        $('.loopStart').html(Math.floor(currentLoopTime) + ' - ');
+        $('.loopStart').html(currentLoopTime + ' / ');
         $('.loopEnd').html('');
 
     });
