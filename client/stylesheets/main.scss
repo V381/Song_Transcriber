@@ -134,3 +134,33 @@ header{
     }
   }
 }
+
+.loop{
+  text-align: center;
+  &:first-child{
+  }
+  i{
+    font-size: 3em;
+    margin-right: 50px;
+    margin-left: 50px;
+    transition: 0.5s ease-in-out;
+    &:hover{
+      transition: 0.5s ease-in-out;
+      color: lighten($defaultBg, 20%);
+    }
+  }
+}
+
+.clearLoop{
+  text-align: center;
+  button{
+    padding: 10px;
+    background-color: $defaultBg;
+    color: white;
+    transition: 0.5s ease-in-out;
+    &:hover{
+      transition: 0.5s ease-in-out;
+      background-color: lighten($defaultBg, 10%);
+    }
+  }
+}
