@@ -111,6 +111,9 @@ header {
   top: -2px; }
 
 @media all and (max-width: 740px) {
+  .loop i {
+    margin: 0 !important; }
+
   .tempo ul li {
     width: 32.5%; }
 
@@ -122,7 +125,11 @@ header {
     width: 100%; } }
 @media all and (max-width: 540px) {
   .tempo ul li {
-    width: 32%; } }
+    width: 32%; }
+
+  .loop i {
+    margin-left: 0;
+    margin-right: 0; } }
 .loop {
   text-align: center; }
   .loop i {
