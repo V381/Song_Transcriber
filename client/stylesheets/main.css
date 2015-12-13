@@ -114,8 +114,10 @@ header {
   .loop i {
     margin: 0 !important; }
 
-  .tempo ul li {
-    width: 32.5%; }
+  .tempo {
+    margin-bottom: 30px; }
+    .tempo ul li {
+      width: 32.5%; }
 
   .inputStyle input[type='file'] {
     float: none;
