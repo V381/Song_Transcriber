@@ -105,6 +105,11 @@ header{
 }
 
 @media all and(max-width: 740px){
+  .loop{
+    i{
+      margin: 0 !important;;
+    }
+  }
   .tempo{
     ul{
       li{
@@ -123,6 +128,7 @@ header{
       width: 100%;
     }
   }
+
 }
 
 @media all and(max-width: 540px){
@@ -131,6 +137,12 @@ header{
       li{
         width: 32%;
       }
+    }
+  }
+  .loop{
+    i{
+      margin-left: 0;
+      margin-right: 0;
     }
   }
 }
@@ -164,3 +176,4 @@ header{
     }
   }
 }
+
