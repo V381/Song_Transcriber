@@ -1,4 +1,5 @@
 (function() {
+
     var form = document.getElementsByTagName('form')[0];
     var audio = document.querySelector('audio'),
         currentLoopTime = -1,
@@ -7,7 +8,10 @@
 
     var audioTempoMap = {
         '100%' : 1.0,
-        '75%' : 0.7,
+        '90%' : 0.9,
+        '80%' : 0.8,
+        '70%' : 0.7,
+        '60%' : 0.6,
         '50%' : 0.5
     };
 
@@ -31,7 +35,6 @@
 
     $('.fa-repeat').on('touchstart click', function() {
         currentLoopTime = audio.currentTime;
-        t = false;
         $('.loopStart').html(currentLoopTime + ' / ');
         $('.loopEnd').html('');
 
@@ -48,7 +51,6 @@
     });
 
     $(audio).bind('timeupdate', function() {
-        console.log(audio.currentTime, endLoopTime);
         if(Math.floor(audio.currentTime) === Math.floor(endLoopTime)){
             audio.currentTime = currentLoopTime;
         }
