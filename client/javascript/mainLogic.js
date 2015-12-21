@@ -3,8 +3,15 @@
     var form = document.getElementsByTagName('form')[0];
     var audio = document.querySelector('audio'),
         currentLoopTime = -1,
-        endLoopTime = -2;
+        endLoopTime = -2,
+        currentSongTime = -1,
+        endSongTime = -2;
 
+    function timeConvert(time){
+        var minutes = Math.floor(time / 60);
+        var seconds = time % 60;
+        return minutes + ":" + seconds;
+    }
 
     var audioTempoMap = {
         '100%' : 1.0,
@@ -34,7 +41,9 @@
     });
 
     $('.fa-repeat').on('touchstart click', function() {
-        currentLoopTime = audio.currentTime;
+        currentLoopTime = Math.floor(audio.currentTime);
+        currentSongTime = audio.currentTime;
+        currentLoopTime = timeConvert(currentLoopTime);
         $('.loopStart').html(currentLoopTime + ' / ');
         $('.loopEnd').html('');
 
@@ -43,22 +52,26 @@
     var isAudioPlaying = false;
 
     $('.fa-rotate-left').on('touchstart click', function() {
-        endLoopTime = audio.currentTime;
-        audio.currentTime = currentLoopTime;
+        endLoopTime = Math.floor(audio.currentTime);
+        endSongTime = audio.currentTime;
+        endLoopTime = timeConvert(endLoopTime);
+        audio.currentTime = currentSongTime;
         $('.loopEnd').html(endLoopTime);
         audio.play();
         isAudioPlaying = true;
     });
 
     $(audio).bind('timeupdate', function() {
-        if(Math.floor(audio.currentTime) === Math.floor(endLoopTime)){
-            audio.currentTime = currentLoopTime;
+        if(Math.floor(audio.currentTime) === Math.floor(endSongTime)){
+            audio.currentTime = currentSongTime;
         }
     });
 
     $('.clearLoop > button').on('touchstart click', function() {
         currentLoopTime = -1;
         endLoopTime = -2;
+        endSongTime = -2;
+        currentSongTime = -1;
         $('.loopStart').html('');
         $('.loopEnd').html('');
     });
