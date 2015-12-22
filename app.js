@@ -25,7 +25,7 @@ app.get('/', function(req, res) {
 app.post('/fileupload', function(req, res) {
     var fstream;
     req.pipe(req.busboy);
-    fs.emptyDirSync(__dirname + '/songs/');
+//    fs.emptyDirSync(__dirname + '/songs/');
     req.busboy.on('file', function (fieldname, file, filename) {
         songName = filename;
         console.log("Uploading: " + filename);
