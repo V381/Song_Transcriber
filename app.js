@@ -11,7 +11,7 @@ var app = express();
 var songName = '';
 var ms = require('mediaserver');
 
-app.set('port', process.env.PORT || OPENSHIFT_NODEJS_PORT || 8080);
+app.set('port', process.env.PORT || 8080);
 app.use(express.static(__dirname));
 app.use(busboy());
 
@@ -25,7 +25,6 @@ app.get('/', function(req, res) {
 app.post('/fileupload', function(req, res) {
     var fstream;
     req.pipe(req.busboy);
-    fs.emptyDirSync(__dirname + '/songs/');
     req.busboy.on('file', function (fieldname, file, filename) {
         songName = filename;
         console.log("Uploading: " + filename);
@@ -41,7 +40,6 @@ app.post('/fileupload', function(req, res) {
     });
 
 });
-
 
 
 app.listen(app.get('port'));
