@@ -20,12 +20,12 @@
 <div class="container">
     <section class="uploadSong">
         <div class="tempoHeadLine">
-            <h1>Upload: </h1>
+            <h1>Upload: <span class="tempoHeadLine__wrong-format"></span></h1>
         </div>
         <div class="inputStyle">
             <form action="/fileupload" method="post" enctype="multipart/form-data">
-                <input type='file' name="upload">
-                <input type="submit" value="Upload">
+                <input type='file' name="upload" class="fileUpload">
+                <input type="submit" value="Upload" class="fileSubmit">
             </form>
         </div>
     </section>
