@@ -36,8 +36,13 @@
     });
 
     $.get('/getFile', function(data){
-        $('.songName').html('' + data.substr(7));
         audio.src = data;
+        if(data.substr(data.length - 4) != (".mp3" || ".ogg" || ".wav")){
+            $('.tempoHeadLine__wrong-format').html('Please provide right format: .mp3, .wav or .ogg file');
+        }else{
+            $('.songName').html('' + data.substr(7));
+            $('.tempoHeadLine__wrong-format').html('')
+        }
     });
 
     $('.fa-repeat').on('touchstart click', function() {
@@ -76,5 +81,12 @@
         $('.loopEnd').html('');
     });
 
+
+    $('.fileUpload').css("width", "100%");
+    $('.fileUpload').hover(function() {
+        $(this).css('cursor', 'pointer');
+    });
+    $('.fileSubmit').css("width", "100%");
+    
 
 })();
